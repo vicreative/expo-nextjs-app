@@ -1,4 +1,4 @@
-# Solito with Expo Router Example Monorepo 🕴
+# Solito with Expo Router Monorepo 🕴
 
 A Cross Platform Expo + Next.js application built for Managing Experiences using Expo Router.
 
