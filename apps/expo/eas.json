@@ -1,0 +1,52 @@
+{
+  "cli": {
+    "version": ">= 3.12.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
+      "autoIncrement": true,
+      "env": {
+        "APP_ENV": "development"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "staging": {
+      "channel": "staging",
+      "autoIncrement": true,
+      "env": {
+        "APP_ENV": "staging"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "autoIncrement": true,
+      "env": {
+        "APP_ENV": "production"
+      }
+    }
+  },
+  "submit": {
+    "staging": {
+      "ios": {
+        "appName": "Expitra (STAGING)",
+        "bundleIdentifier": "com.expitra.stage"
+      }
+    },
+    "production": {
+      "ios": {
+        "appName": "Expitra",
+        "bundleIdentifier": "com.expitra.expitra",
+        "metadataPath": "./store.config.js"
+      }
+    }
+  }
+}

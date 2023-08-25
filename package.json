@@ -1,0 +1,31 @@
+{
+  "name": "expo-nextjs-app",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^4.32.5",
+    "@types/react": "^18.0.17",
+    "@types/react-native": "^0.69.5",
+    "eslint": "^8.21.0",
+    "turbo": "^1.4.2",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "web": "cd apps/next && yarn dev",
+    "mobile": "cd apps/expo && yarn start",
+    "build:web": "cd apps/next && yarn build",
+    "build:mobile": "cd apps/expo && yarn build"
+  },
+  "resolutions": {
+    "metro": "^0.73.1",
+    "metro-resolver": "^0.73.1"
+  },
+  "nohoist": [
+    "**/expo-router",
+    "**/expo-router/**"
+  ],
+  "packageManager": "yarn@3.4.1"
+}

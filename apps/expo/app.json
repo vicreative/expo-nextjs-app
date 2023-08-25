@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "expo-nextjs-app",
+    "slug": "expo-nextjs-app",
+    "version": "1.0.0",
+    "scheme": "expo-nextjs-app",
+    "platforms": ["ios", "android"],
+    "ios": {
+      "bundleIdentifier": "com.expitra.expitra"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7bb8ac19-f2ae-4bd5-bcc9-a105af27ca5f"
+      }
+    },
+    "android": {
+      "package": "com.expitra.expitra"
+    }
+  }
+}

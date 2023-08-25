@@ -1,0 +1,34 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.expitra.expitra",
+      "sha256_cert_fingerprints": [
+        "60:EB:5C:D3:E3:91:A9:FE:91:25:25:A1:1E:1D:63:46:56:40:7D:9C:37:75:F4:A4:00:D4:B6:B4:A2:D2:D6:6D"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.expitra.dev",
+      "sha256_cert_fingerprints": [
+        "0B:A9:67:08:B2:BF:DE:84:3F:E1:E3:08:16:ED:CE:6C:2C:A3:41:60:B9:EC:EB:A6:FB:84:C7:9A:8C:05:30:A5",
+        "08:9B:F9:5F:10:4C:BD:14:6A:81:79:3B:F8:99:CB:78:D3:B9:BE:F7:97:17:7F:29:DF:79:6C:44:86:D0:60:3F"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.expitra.stage",
+      "sha256_cert_fingerprints": [
+        "19:B9:40:B5:9A:04:2F:AB:58:FF:5B:51:2D:29:2F:37:DE:55:7C:AB:5C:D4:49:33:E0:B6:6B:11:92:98:A2:D2",
+        "21:2D:80:97:25:EB:C3:6F:81:43:B9:89:06:96:EE:33:36:11:F7:FA:33:09:BC:DB:78:A4:7F:92:09:6B:54:7A"
+      ]
+    }
+  }
+]

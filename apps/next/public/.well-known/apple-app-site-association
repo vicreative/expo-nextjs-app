@@ -1,0 +1,50 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "C24DA86K4J.com.expitra.expitra",
+          "C24DA86K4J.com.expitra.dev",
+          "C24DA86K4J.com.expitra.stage"
+        ],
+        "components": [
+          {
+            "#": "no_universal_links",
+            "exclude": true,
+            "comment": "Matches any URL whose fragment equals no_universal_links and instructs the system not to open it as a universal link"
+          },
+          {
+            "/": "/*",
+            "comment": "Matches any URL whose path starts with /"
+          },
+          {
+            "/": "/42Yx/*",
+            "comment": "Matches any URL whose path starts with /42Yx/"
+          },
+          {
+            "/": "/qyHH/*",
+            "comment": "Matches any URL whose path starts with /qyHH/"
+          },
+          {
+            "/": "/KPCq/*",
+            "comment": "Matches any URL whose path starts with /KPCq/"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "C24DA86K4J.com.expitra.expitra",
+      "C24DA86K4J.com.expitra.dev",
+      "C24DA86K4J.com.expitra.stage"
+    ]
+  },
+  "appclips": {
+    "apps": [
+      "com.expitra.expitra",
+      "com.expitra.dev",
+      "com.expitra.stage"
+    ]
+  }
+}
