@@ -16,7 +16,7 @@ export default function useAppContext(context = undefined) {
   switch (context) {
     case 'user':
       return resolveContext(userContext);
-    case 'app/navigation':
+    case 'navigation':
       return resolveContext(navigationContext);
     case 'notification':
       return resolveContext(notificationContext);

@@ -1,6 +1,6 @@
 # Solito with Expo Router Example Monorepo 🕴
 
-Expo + Next.js app using Expo Router.
+A Cross Platform Expo + Next.js application built for Managing Experiences using Expo Router.
 
 ## ⚡️ Instantly clone & deploy
 
@@ -22,26 +22,27 @@ Expo + Next.js app using Expo Router.
   - `expo`
     - `app` you'll be creating files inside of `apps/expo/app` to use file system routing on iOS and Android.
   - `next`
+    - `pages` you'll be creating files inside of `apps/next/pages` to use file system routing on the Web.
 
 - `packages` shared packages across apps
   - `app` you'll be importing most files from `app/`
     - `features` (don't use a `screens` folder. organize by feature.)
     - `provider` (all the providers that wrap the app, and some no-ops for Web.)
 
-You can add other folders inside of `packages/` if you know what you're doing and have a good reason to.
+You can add other folders inside of `packages/app` if you know what you're doing and have a good reason to.
 
 ## 🏁 Start the app
 
 - Install dependencies: `yarn`
 
 - Next.js local dev: `yarn web`
-  - Runs `yarn next`
+  - Runs `yarn dev` which alternatively runs `next dev -p 3002`
 - Expo local dev:
   - First, build a dev client onto your device or simulator
     - `cd apps/expo`
     - Then, either `expo run:ios`, or `eas build`
   - After building the dev client, from the root of the monorepo...
-    - `yarn native` (This runs `expo start --dev-client`)
+    - `yarn mobile` (This runs `expo start --dev-client`)
 
 ## 🆕 Add new dependencies
 
@@ -51,7 +52,7 @@ If you're installing a JavaScript-only dependency that will be used across platf
 
 ```sh
 cd packages/app
-yarn add date-fns
+yarn add moment
 cd ../..
 yarn
 ```

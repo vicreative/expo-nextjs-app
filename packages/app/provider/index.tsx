@@ -8,6 +8,7 @@ import { NotificationsProvider } from 'app/context/NotificationsContext';
 import GoogleOAuthProvider from './google-oauth';
 import { SheetProvider } from './sheet';
 import ThemeProvider from './theme-provider';
+import { NavigationProvider } from 'app/context/NavigationContext';
 
 function onAppStateChange(status) {
   // React Query already supports in web browser refetch on window focus by default
@@ -25,17 +26,19 @@ export function Provider({ children }: { children: React.ReactNode }) {
   useAppState(onAppStateChange);
   return (
     <SafeArea>
-      <ThemeProvider>
-        <QueryClientProvider client={queryClient}>
-          <UserProvider>
-            <NotificationsProvider>
-              <SheetProvider>
-                <GoogleOAuthProvider>{children}</GoogleOAuthProvider>
-              </SheetProvider>
-            </NotificationsProvider>
-          </UserProvider>
-        </QueryClientProvider>
-      </ThemeProvider>
+      <NavigationProvider>
+        <ThemeProvider>
+          <QueryClientProvider client={queryClient}>
+            <UserProvider>
+              <NotificationsProvider>
+                <SheetProvider>
+                  <GoogleOAuthProvider>{children}</GoogleOAuthProvider>
+                </SheetProvider>
+              </NotificationsProvider>
+            </UserProvider>
+          </QueryClientProvider>
+        </ThemeProvider>
+      </NavigationProvider>
     </SafeArea>
   );
 }
