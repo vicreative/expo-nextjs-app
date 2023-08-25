@@ -15,9 +15,7 @@
   },
   "scripts": {
     "web": "cd apps/next && yarn dev",
-    "mobile": "cd apps/expo && yarn start",
-    "build:web": "cd apps/next && yarn build",
-    "build:mobile": "cd apps/expo && yarn build"
+    "mobile": "cd apps/expo && yarn start"
   },
   "resolutions": {
     "metro": "^0.73.1",

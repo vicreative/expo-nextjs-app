@@ -19,6 +19,7 @@ const nextConfig = {
   // once that gets fixed, set this back to true
   reactStrictMode: false,
   swcMinify: true,
+  webpack5: true,
   experimental: {
     forceSwcTransforms: true,
     swcPlugins: [[require.resolve('./plugins/swc_plugin_reanimated.wasm')]]
