@@ -37,14 +37,14 @@
   "submit": {
     "staging": {
       "ios": {
-        "appName": "Expitra (STAGING)",
-        "bundleIdentifier": "com.expitra.stage"
+        "appName": "Expo NextJs App (STAGING)",
+        "bundleIdentifier": "com.myapp.stage"
       }
     },
     "production": {
       "ios": {
-        "appName": "Expitra",
-        "bundleIdentifier": "com.expitra.expitra",
+        "appName": "Expo NextJs App",
+        "bundleIdentifier": "com.myapp.app",
         "metadataPath": "./store.config.js"
       }
     }
