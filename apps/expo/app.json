@@ -6,7 +6,7 @@
     "scheme": "expo-nextjs-app",
     "platforms": ["ios", "android"],
     "ios": {
-      "bundleIdentifier": "com.expitra.expitra"
+      "bundleIdentifier": "com.myapp.app"
     },
     "extra": {
       "eas": {
@@ -14,7 +14,7 @@
       }
     },
     "android": {
-      "package": "com.expitra.expitra"
+      "package": "com.myapp.app"
     }
   }
 }
