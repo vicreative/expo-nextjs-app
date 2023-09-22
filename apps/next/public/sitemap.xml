@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://app.expitra.com/</loc>
-		<lastmod>2023-03-03T19:00:00+01:00</lastmod>
-	</url>
-	<url>
-		<loc>https://app.expitra.com/login</loc>
-		<lastmod>2023-03-03T19:00:00+01:00</lastmod>
-	</url>
-	<url>
-		<loc>https://app.expitra.com/register</loc>
-		<lastmod>2023-03-03T19:00:00+01:00</lastmod>
-	</url>
-	<url>
-		<loc>https://app.expitra.com/forgot-password</loc>
-		<lastmod>2023-03-03T19:00:00+01:00</lastmod>
-	</url>
-	<url>
-		<loc>https://app.expitra.com/experiences</loc>
+		<loc>https://example.com/</loc> //TODO: USE YOUR WEBSITE URL HERE
 		<lastmod>2023-03-03T19:00:00+01:00</lastmod>
 	</url>
 </urlset>

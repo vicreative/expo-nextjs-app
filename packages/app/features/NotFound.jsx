@@ -1,8 +1,6 @@
-import Footer from 'app/components/Footer';
 import NotFoundIcon from 'app/components/Icons/NotFound';
 import en from 'app/i18n';
 import { Container, Text, Center, Button, Hidden, Box } from 'native-base';
-import { NavHeader } from 'app/navigation/Header';
 import { useRouter } from 'solito/router';
 
 export default function NotFound() {
@@ -35,17 +33,6 @@ export default function NotFound() {
             </Button>
           </Center>
         </Container>
-        {/* larger device(tablet & desktop) for web only */}
-        <Hidden only="base">
-          <NavHeader />
-        </Hidden>
-        {/* smaller device(mobile phones)for web only */}
-        <Hidden from="sm" mx="20px">
-          <NavHeader onlyLogo />
-        </Hidden>
-        <Box px="20px">
-          <Footer />
-        </Box>
       </Hidden>
       {/* for ios and android devices */}
       <Hidden platform={['web']}>

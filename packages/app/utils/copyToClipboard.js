@@ -17,7 +17,7 @@ const copyToClipboard = async (copyString, onCopy = () => {}, doSomethingAfterCl
             py={`${spacing[6]}px`}
             borderRadius="full"
           >
-            {en.experiences.shareExperience.copied}
+            Copied!
           </Box>
         );
       }

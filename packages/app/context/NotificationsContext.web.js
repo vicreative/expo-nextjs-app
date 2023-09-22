@@ -2,6 +2,7 @@ import React from 'react';
 import env from 'app/config/env';
 import useAppContext, { NotificationsContext } from 'app/hooks/useAppContext';
 import { Platform } from 'react-native-web';
+import useAsyncStorage from 'app/hooks/useAsyncStorage';
 
 const socketIOClient = require('socket.io-client');
 
@@ -27,37 +28,38 @@ export const activitiesSocketClient = token =>
   });
 
 export const NotificationsProvider = ({ children }) => {
-  const { state: userState, dispatch: setUserState } = useAppContext('user');
+  const { dispatch: setUserState } = useAppContext('user');
   const [state, dispatch] = React.useReducer(NotificationsReducer, initialState);
+  const { isLoading, token, isLoggedIn } = useAsyncStorage();
 
   const value = { state, dispatch };
 
   React.useEffect(() => {
-    if (userState.token !== null && userState.isLoggedIn === 'true') {
-      activitiesSocketClient(userState.token).on('connect', () => {
+    if (!isLoading && token !== null && isLoggedIn === 'true') {
+      activitiesSocketClient(token).on('connect', () => {
         console.log(Platform.OS.toUpperCase(), 'You are now connected to activities');
       });
 
-      activitiesSocketClient(userState.token).on('disconnect', () => {
+      activitiesSocketClient(token).on('disconnect', () => {
         console.log(Platform.OS.toUpperCase(), 'Disconnected from activities');
       });
 
-      activitiesSocketClient(userState.token).on('NEW_ACTIVITY', newActivity => {
+      activitiesSocketClient(token).on('NEW_ACTIVITY', newActivity => {
         console.log('NEW_ACTIVITY', newActivity);
       });
 
-      activitiesSocketClient(userState.token).on('LOAD_UNREAD_ACTIVITIES', data => {
-        setUserState({ ...userState, noOfNewActivity: data.data.length });
+      activitiesSocketClient(token).on('LOAD_UNREAD_ACTIVITIES', data => {
+        setUserState(userState => ({ ...userState, noOfNewActivity: data.data.length }));
       });
 
       return () => {
-        activitiesSocketClient(userState.token).off('connect');
-        activitiesSocketClient(userState.token).off('NEW_ACTIVITY');
-        activitiesSocketClient(userState.token).off('LOAD_UNREAD_ACTIVITIES');
+        activitiesSocketClient(token).off('connect');
+        activitiesSocketClient(token).off('NEW_ACTIVITY');
+        activitiesSocketClient(token).off('LOAD_UNREAD_ACTIVITIES');
       };
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userState.token, userState.isLoggedIn]);
+  }, [isLoading, token, isLoggedIn]);
 
   return <NotificationsContext.Provider value={value}>{children}</NotificationsContext.Provider>;
 };

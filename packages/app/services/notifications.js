@@ -18,7 +18,7 @@ export const registerForPushNotificationsAsync = async () => {
     }
     token = (
       await Notifications.getExpoPushTokenAsync({
-        experienceId: '@expitra/expitra'
+        experienceId: 'my@experienceId' //TODO:  USE YOUR EXPERIENCE ID HERE
       })
     ).data;
   } else {

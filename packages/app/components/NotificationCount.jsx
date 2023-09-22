@@ -3,6 +3,7 @@ import useAppContext from 'app/hooks/useAppContext';
 import { Flex, Heading, Icon } from 'native-base';
 import Touchable from './Gestures/Touchable';
 import { Ionicons } from '@expo/vector-icons';
+import useAsyncStorage from 'app/hooks/useAsyncStorage';
 
 export function NotificationBadgeCount({ fontSize = `${spacing[12]}px`, count, ...rest }) {
   return (
@@ -23,8 +24,9 @@ export function NotificationBadgeCount({ fontSize = `${spacing[12]}px`, count, .
 
 export function NotificationIconWithCount() {
   const { state: userState, dispatch } = useAppContext('user');
+  const { isLoading, token, isLoggedIn } = useAsyncStorage();
 
-  const isLoggedIn = userState.isLoggedIn === 'true' || userState.token !== null;
+  const isUserLoggedIn = !isLoading && (isLoggedIn === 'true' || token !== null);
 
   const openNotifications = () => {
     dispatch({
@@ -36,7 +38,7 @@ export function NotificationIconWithCount() {
     });
   };
   return (
-    isLoggedIn && (
+    isUserLoggedIn && (
       <Touchable
         borderWidth={{ base: 0, sm: 1 }}
         borderColor="gray.500"

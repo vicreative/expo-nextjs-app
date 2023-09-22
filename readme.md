@@ -36,7 +36,7 @@ You can add other folders inside of `packages/app` if you know what you're doing
 - Install dependencies: `yarn`
 
 - Next.js local dev: `yarn web`
-  - Runs `yarn dev` which alternatively runs `next dev -p 3002`
+  - Runs `yarn dev` which alternatively runs `next dev -p 3006`
 - Expo local dev:
   - First, build a dev client onto your device or simulator
     - `cd apps/expo`

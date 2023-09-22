@@ -44,11 +44,7 @@ const LoadingState = ({
   const renderLoader = () => (
     <Animated.View style={{ transform: [{ scale: animation }] }}>
       {useSvgLogo ? (
-        <Logo
-          width={iconSize}
-          height={iconSize}
-          fill={colorScheme === 'white' ? colors.base.white : colors.primary[600]}
-        />
+        <Logo width={iconSize} height={iconSize} />
       ) : (
         <Image
           src="/assets/images/favicon.png"

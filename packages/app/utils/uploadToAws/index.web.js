@@ -54,7 +54,7 @@ export default async function uploadToAws(file, onSuccess = () => {}, onError = 
   };
 
   const options = {
-    url: `${env.API_URL}${e.INITIATE_UPLOAD}`,
+    url: `${env.API_URL}${e.INITIATE_UPLOAD}`, //TODO: use url thats responsible for initiating upload to the backend
     method: 'POST',
     headers: {
       Authorization: `Bearer ${token}`

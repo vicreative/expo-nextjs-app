@@ -4,19 +4,11 @@ import { NativeBaseProvider } from 'native-base';
 import theme from 'app/config/theme';
 import { getColorMode, storeColorMode } from 'app/utils/auth';
 import useDimensions from 'app/hooks/useDimensions';
-import { Platform } from 'react-native';
-import { useEffect, useState } from 'react';
-import LoadingState from '../../components/LoadingState';
 
 export default function ThemeProvider({ children }) {
-  const [isReady, setIsReady] = useState(false);
   const {
     screen: { height: SCREEN_HEIGHT }
   } = useDimensions();
-
-  useEffect(() => {
-    setIsReady(true);
-  }, []);
 
   const colorModeManager = {
     get: async () => {
@@ -37,16 +29,8 @@ export default function ThemeProvider({ children }) {
     }
   };
 
-  if (Platform.OS === 'web' && !isReady) {
-    return <LoadingState useSvgLogo={false} />;
-  }
-
   return (
-    <NativeBaseProvider
-      theme={theme(SCREEN_HEIGHT)}
-      colorModeManager={colorModeManager}
-      isSSR={Platform.OS === 'web' ? true : false}
-    >
+    <NativeBaseProvider theme={theme(SCREEN_HEIGHT)} colorModeManager={colorModeManager}>
       {children}
     </NativeBaseProvider>
   );

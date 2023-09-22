@@ -19,7 +19,9 @@
   },
   "resolutions": {
     "metro": "^0.73.1",
-    "metro-resolver": "^0.73.1"
+    "metro-resolver": "^0.73.1",
+    "native-base@^3.4.25": "patch:native-base@npm%3A3.4.28#./.yarn/patches/native-base-npm-3.4.28-a8ecceae4d.patch",
+    "native-base@^3.4.19": "patch:native-base@npm%3A3.4.28#./.yarn/patches/native-base-npm-3.4.28-a8ecceae4d.patch"
   },
   "nohoist": [
     "**/expo-router",

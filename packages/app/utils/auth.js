@@ -4,7 +4,7 @@ import {
   AUTH_TOKEN_IDENTIFIER,
   COLOR_MODE_IDENTIFIER,
   CURRENT_ROUTE,
-  EXPITRA_LOGIN_IDENTIFIER
+  LOGIN_IDENTIFIER
 } from 'app/constants/strings';
 import Cookies from 'js-cookie';
 import { Platform } from 'react-native';
@@ -13,7 +13,7 @@ export const storeAuthToken = token => {
   if (Platform.OS === 'web') {
     return Cookies.set(AUTH_TOKEN_IDENTIFIER, token, {
       path: '/',
-      domain: env.APP_ENV !== 'local' ? '.expitra.com' : null
+      domain: env.APP_ENV !== 'local' ? '.example.com' : null //TODO: USE YOYUR OWN DOMAIN HERE
     });
   } else {
     return AsyncStorage.setItem(AUTH_TOKEN_IDENTIFIER, token);
@@ -32,7 +32,7 @@ export const removeAuthToken = () => {
   if (Platform.OS === 'web') {
     return Cookies.remove(AUTH_TOKEN_IDENTIFIER, {
       path: '/',
-      domain: env.APP_ENV !== 'local' ? '.expitra.com' : null
+      domain: env.APP_ENV !== 'local' ? '.example.com' : null //TODO: USE YOYUR OWN DOMAIN HERE
     });
   } else {
     return AsyncStorage.removeItem(AUTH_TOKEN_IDENTIFIER);
@@ -43,7 +43,7 @@ export const storeColorMode = mode => {
   if (Platform.OS === 'web') {
     return Cookies.set(COLOR_MODE_IDENTIFIER, mode, {
       path: '/',
-      domain: env.APP_ENV !== 'local' ? '.expitra.com' : null
+      domain: env.APP_ENV !== 'local' ? '.example.com' : null //TODO: USE YOYUR OWN DOMAIN HERE
     });
   } else {
     return AsyncStorage.setItem(COLOR_MODE_IDENTIFIER, mode);
@@ -62,7 +62,7 @@ export const removeColorMode = () => {
   if (Platform.OS === 'web') {
     return Cookies.remove(COLOR_MODE_IDENTIFIER, {
       path: '/',
-      domain: env.APP_ENV !== 'local' ? '.expitra.com' : null
+      domain: env.APP_ENV !== 'local' ? '.example.com' : null //TODO: USE YOYUR OWN DOMAIN HERE
     });
   } else {
     return AsyncStorage.removeItem(COLOR_MODE_IDENTIFIER);
@@ -73,7 +73,7 @@ export const storeCurrentRoute = path => {
   if (Platform.OS === 'web') {
     return Cookies.set(CURRENT_ROUTE, path, {
       path: '/',
-      domain: env.APP_ENV !== 'local' ? '.expitra.com' : null
+      domain: env.APP_ENV !== 'local' ? '.example.com' : null //TODO: USE YOYUR OWN DOMAIN HERE
     });
   } else {
     return AsyncStorage.setItem(CURRENT_ROUTE, path);
@@ -92,7 +92,7 @@ export const removePreviousRoute = () => {
   if (Platform.OS === 'web') {
     return Cookies.remove(CURRENT_ROUTE, {
       path: '/',
-      domain: env.APP_ENV !== 'local' ? '.expitra.com' : null
+      domain: env.APP_ENV !== 'local' ? '.example.com' : null //TODO: USE YOYUR OWN DOMAIN HERE
     });
   } else {
     return AsyncStorage.removeItem(CURRENT_ROUTE);
@@ -101,30 +101,30 @@ export const removePreviousRoute = () => {
 
 export const storeLoginIdentifier = isLoggedIn => {
   if (Platform.OS === 'web') {
-    return Cookies.set(EXPITRA_LOGIN_IDENTIFIER, isLoggedIn, {
+    return Cookies.set(LOGIN_IDENTIFIER, isLoggedIn, {
       path: '/',
-      domain: env.APP_ENV !== 'local' ? '.expitra.com' : null
+      domain: env.APP_ENV !== 'local' ? '.example.com' : null //TODO: USE YOYUR OWN DOMAIN HERE
     });
   } else {
-    return AsyncStorage.setItem(EXPITRA_LOGIN_IDENTIFIER, isLoggedIn);
+    return AsyncStorage.setItem(LOGIN_IDENTIFIER, isLoggedIn);
   }
 };
 
 export const getLoginIdentifier = async () => {
   if (Platform.OS === 'web') {
-    return Cookies.get(EXPITRA_LOGIN_IDENTIFIER);
+    return Cookies.get(LOGIN_IDENTIFIER);
   } else {
-    return await AsyncStorage.getItem(EXPITRA_LOGIN_IDENTIFIER);
+    return await AsyncStorage.getItem(LOGIN_IDENTIFIER);
   }
 };
 
 export const removeLoginIdentifier = () => {
   if (Platform.OS === 'web') {
-    return Cookies.remove(EXPITRA_LOGIN_IDENTIFIER, {
+    return Cookies.remove(LOGIN_IDENTIFIER, {
       path: '/',
-      domain: env.APP_ENV !== 'local' ? '.expitra.com' : null
+      domain: env.APP_ENV !== 'local' ? '.example.com' : null //TODO: USE YOYUR OWN DOMAIN HERE
     });
   } else {
-    return AsyncStorage.removeItem(EXPITRA_LOGIN_IDENTIFIER);
+    return AsyncStorage.removeItem(LOGIN_IDENTIFIER);
   }
 };

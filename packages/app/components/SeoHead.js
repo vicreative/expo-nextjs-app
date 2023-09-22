@@ -2,9 +2,9 @@ import Head from 'next/head';
 import env from 'app/config/env';
 
 export default function SeoHead({
-  title = `Expitra - Explore and connect on a global scale`,
-  description = 'Plan your next trip and discover authentic local experiences curated by industry experts, from group trips to splitting expenses all in one place.',
-  openGraphDescription = `Plan your next trip and discover authentic experiences curated by industry experts, from group trips to splitting expenses all in one place.`,
+  title = `Expo NextJs App`,
+  description = 'A Cross Platform Expo + Next.js application built using Expo Router.',
+  openGraphDescription = `A Cross Platform Expo + Next.js application built using Expo Router.`,
   imgUrl = `https=//xperia-bucket.s3.us-west-2.amazonaws.com/assets/images/expitra-opengraph-image-md.png`,
   imgType = 'image/png',
   url = env.APP_URL,
@@ -16,7 +16,7 @@ export default function SeoHead({
       <meta data-n-head="ssr" charSet="utf-8" />
       <meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1" />
       <meta name="google-site-verification" content="zggK9G6NNqi7nzSJdtrMMHKpUaSeOVPKMFI9RkJZN7k" />
-      <meta name="keywords" content="expitra, experiences" />
+      <meta name="keywords" content="expo, nextjs" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="msapplication-TileImage" content={imgUrl} />
@@ -32,7 +32,7 @@ export default function SeoHead({
         data-n-head="ssr"
         data-hid="twitter:image:alt"
         name="twitter:image:alt"
-        content="Expitra Logo"
+        content="Logo"
       />
       <meta data-n-head="ssr" data-hid="twitter:title" property="twitter:title" content={title} />
       <meta
@@ -42,7 +42,7 @@ export default function SeoHead({
         content={description}
       />
       <meta data-n-head="ssr" data-hid="twitter:url" property="twitter:url" content={url} />
-      <meta property="og:site_name" content="Expitra" />
+      <meta property="og:site_name" content="Expo NextJs App" />
       <meta property="og:type" content="website" />
       <meta data-n-head="ssr" data-hid="og:type" name="og:type" content="website" />
       <meta

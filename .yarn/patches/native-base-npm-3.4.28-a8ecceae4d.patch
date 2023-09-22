@@ -1,0 +1,13 @@
+diff --git a/src/core/NativeBaseProvider.tsx b/src/core/NativeBaseProvider.tsx
+index 43b4bd14b648f19227dbfb8caa37fe230a06c983..8867311f139986b3eca22d73831c309f337be8f9 100644
+--- a/src/core/NativeBaseProvider.tsx
++++ b/src/core/NativeBaseProvider.tsx
+@@ -94,7 +94,7 @@ const NativeBaseProvider = (props: NativeBaseProviderProps) => {
+             <OverlayProvider isSSR>
+               <ToastProvider>
+                 <InitializeToastRef />
+-                <SSRProvider>{children}</SSRProvider>
++                {React.version >= '18' ? children : <SSRProvider>{children}</SSRProvider>}
+               </ToastProvider>
+             </OverlayProvider>
+           </HybridProvider>

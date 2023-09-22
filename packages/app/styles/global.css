@@ -10,11 +10,13 @@ body,
   /* Allows content to fill the viewport and go beyond the bottom */
   min-height: 100%;
 }
+
+/* Load Satoshi Fonts */
 @font-face {
   font-family: 'Satoshi-Regular';
   src:
     local('Satoshi-Regular'),
-    url('/assets/fonts/Satoshi-Regular.otf') format('truetype');
+    url('../assets/fonts/Satoshi-Regular.otf') format('truetype');
   font-style: normal;
   font-weight: 400;
 }
@@ -22,7 +24,7 @@ body,
   font-family: 'Satoshi-Medium';
   src:
     local('Satoshi-Medium'),
-    url('/assets/fonts/Satoshi-Medium.otf') format('truetype');
+    url('../assets/fonts/Satoshi-Medium.otf') format('truetype');
   font-style: normal;
   font-weight: 500;
 }
@@ -30,25 +32,9 @@ body,
   font-family: 'Satoshi-Bold';
   src:
     local('Satoshi-Bold'),
-    url('/assets/fonts/Satoshi-Bold.otf') format('truetype');
+    url('../assets/fonts/Satoshi-Bold.otf') format('truetype');
   font-style: normal;
   font-weight: 700;
-}
-@font-face {
-  font-family: 'Satoshi-Light';
-  src:
-    local('Satoshi-Light'),
-    url('/assets/fonts/Satoshi-Light.otf') format('truetype');
-  font-style: normal;
-  font-weight: 300;
-}
-@font-face {
-  font-family: 'Satoshi-Black';
-  src:
-    local('Satoshi-Black'),
-    url('/assets/fonts/Satoshi-Black.otf') format('otf');
-  font-style: normal;
-  font-weight: 400;
 }
 
 #__next {
@@ -161,10 +147,10 @@ select {
 
 /* React web share */
 .rws-header {
-  font-family: 'Satoshi-Bold', 'DM Sans', sans-serif;
+  font-family: 'Satoshi-Bold', 'SourceSerif4-Medium', sans-serif;
 }
 .rws-close {
-  font-family: 'Satoshi-Medium', 'DM Sans', sans-serif;
+  font-family: 'Satoshi-Medium', 'SourceSerif4-Medium', sans-serif;
 }
 
 /* Styles for React Responsive Table */
@@ -201,7 +187,7 @@ select {
   /* border-top-right-radius: 8px; */
   font-size: 0.75em;
   font-weight: 500;
-  font-family: 'Satoshi-Medium', 'DM Sans', sans-serif;
+  font-family: 'Satoshi-Medium', 'SourceSerif4-Medium', sans-serif;
   white-space: nowrap;
   position: sticky;
   top: 0;
@@ -236,7 +222,7 @@ select {
   height: 72px;
   word-break: break-word;
   font-weight: 400;
-  font-family: 'Satoshi-Regular', 'DM Sans', sans-serif;
+  font-family: 'Satoshi-Regular', 'SourceSerif4-Medium', sans-serif;
   white-space: nowrap;
   align-items: center;
 }
@@ -261,13 +247,13 @@ select {
 .plus {
   color: #039855;
   font-weight: 700;
-  font-family: 'Satoshi-Bold', 'DM Sans', sans-serif;
+  font-family: 'Satoshi-Bold', 'SourceSerif4-Medium', sans-serif;
 }
 
 .minus {
   color: #23262f;
   font-weight: 700;
-  font-family: 'Satoshi-Bold', 'DM Sans', sans-serif;
+  font-family: 'Satoshi-Bold', 'SourceSerif4-Medium', sans-serif;
 }
 
 .last-item {
